@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="A_Style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/css/flag-icon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"
+    />
+    <title>Amazon Clone</title>
+  </head>
+  <body>
+    <header class="super_navbar">
+      <!-- Upper div , main div -->
+      <div class="navbar_upper">
+        <!-- Amazon logo div -->
+        <div class="logo_div">
+          <img src="amazon_logo.png" alt="amazon_logo" class="amazon_logo" />
+        </div>
+        <!-- location logo -->
+        <div class="location_logo_div">
+          <i class="fas fa-map-marker-alt" id="location_logo"></i>
+          <div class="location_child_div">
+            <p id="deliver">Deliver to</p>
+            <p class="country">Pakistan</p>
+          </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="searchbar_div">
+          <!-- Combo Box -->
+          <select name="options" id="options">
+            <option value="op1">All Departments</option>
+            <option value="op1">Arts and crafts</option>
+            <option value="op1">Automobiles</option>
+            <option value="op1">Baby</option>
+          </select>
+          <!-- Search Field -->
+          <input
+            type="text"
+            id="input_filed"
+            name="input_filed"
+            placeholder="  Search Amazon"
+          />
+          <div class="search_logo_div">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+
+        <!-- Group Div of Four Divs -->
+        <div class="group_div">
+          <!-- Language Div -->
+          <div class="language_div">
+            <span class="flag-icon flag-icon-us" id="flag"></span>
+            <div class="lang">EN</div>
+            <i class="fas fa-sort-down" id="lang_arrow"></i>
+          </div>
+
+          <!-- Accounts Div -->
+          <div class="accounts_div">
+            <div id="Acc_P1">Hello, sign in</div>
+            <div id="Acc_P2">
+              <div id="Acc_p3">Account & Lists</div>
+              <i class="fas fa-sort-down" id="Acc_P4"></i>
+            </div>
+          </div>
+
+          <!-- Returns & Orders Div -->
+          <div class="order_div">
+            <p id="order1">Returns</p>
+            <p id="order2">& Orders</p>
+          </div>
+
+          <!-- Cart Logo Div -->
+          <div class="cart_logo_div">
+            <div class="cart-icon">
+              <svg
+                id="i-cart"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                width="32"
+                height="32"
+                fill="none"
+                stroke="currentcolor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path d="M6 6 L30 6 27 19 9 19 M27 23 L10 23 5 2 2 2" />
+                <circle cx="25" cy="27" r="2" />
+                <circle cx="12" cy="27" r="2" />
+              </svg>
+              <!-- <p id="Shopping_number">0</p> -->
+            </div>
+            <p id="Shopping_number">0</p>
+            <div id="cart">Cart</div>
+          </div>
+        </div>
+        <!-- Navbar Upper Closed -->
+      </div>
+
+      <!-- Lower Navbar -->
+      <div class="navbar_lower">
+        <div class="ln_div1 ln">
+          <i class="fas fa-bars"></i>
+          <p id="ln_div1_p">All</p>
+        </div>
+
+        <div class="ln_div2 ln">Today's deal</div>
+        <div class="ln_div3 ln">Customer Service</div>
+        <div class="ln_div4 ln">Registry</div>
+        <div class="ln_div5 ln">Gifts</div>
+        <div class="ln_div6 ln">Sell</div>
+      </div>
+
+      <script>
+        document.addEventListener("click", (event) => {
+          const inputField = document.querySelector("#input_filed");
+          const container = document.querySelector(".searchbar_div");
+
+          if (container.contains(event.target) && event.target === inputField) {
+            container.classList.add("focused");
+          } else {
+            container.classList.remove("focused");
+          }
+        });
+      </script>
+    </header>
+    <main>
+      <!-- <img src="background image.jpg" alt="background image" class="bg_img"> -->
+
+      <div class="nextl"><i class="bi bi-chevron-left"></i></div>
+      <div class="nextr"><i class="bi bi-chevron-right"></i></div>
+      <br />
+
+      <!-- Containers are placed -->
+
+      <div class="Super_Container">
+        <!-- Container 1 -->
+        <div class="Container1 C">
+          <h2>Gaming accessories</h2>
+          <span class="container_pic">
+            <img src="c1p1.jpg" alt="Headset" class="image" />
+            <p>Headsets</p>
+          </span>
+
+          <span class="container_pic">
+            <img src="c1p2.jpg" alt="Headset" class="image" />
+            <p>Keyboards</p>
+          </span>
+
+          <span class="container_pic">
+            <img src="c1p3.jpg" alt="Headset" class="image" />
+            <p>Computer mice</p>
+          </span>
+
+          <span class="container_pic">
+            <img src="c1p4.jpg" alt="Headset" class="image" />
+            <p>Chairs</p>
+          </span>
+
+          <div>
+            <a class="see_more" href="www.google.com" target="_blank"
+              >See more</a
+            >
+          </div>
+        </div>
+
+        <!-- Container 2 Single Pic-->
+        <div class="Container2 C">
+          <h2>Deals in PCs</h2>
+          <span class="single_pic_container">
+            <img src="c2.jpg" alt="System Unit" class="single_image" />
+          </span>
+          <div>
+            <a class="see_more" href="www.google.com" target="_blank"
+              >Shop now</a
+            >
+          </div>
+        </div>
+
+        <!-- Container 3 -->
+        <div class="Container3 C">
+          <h2>Shop deals in Fashion</h2>
+          <span class="container_pic">
+            <img src="c3p1.jpg" alt="Jeans" class="image" />
+            <p>Jeans under $50</p>
+          </span>
+          <span class="container_pic">
+            <img src="c3p2.jpg" alt="Tops" class="image" />
+            <p>Tops under $25</p>
+          </span>
+          <span class="container_pic">
+            <img src="c3p3.jpg" alt="Dress" class="image" />
+            <p>Dress under $30</p>
+          </span>
+          <span class="container_pic">
+            <img src="c3p4.jpg" alt="Shoes" class="image" />
+            <p>Shoes under $50</p>
+          </span>
+          <div>
+            <a class="see_more" href="www.google.com" target="_blank"
+              >See all deals</a
+            >
+          </div>
+        </div>
+
+        <!-- Container 4 -->
+        <div class="Container4 C">
+          <h2>Refresh your space</h2>
+          <span class="container_pic">
+            <img src="c4p1.jpg" alt="Dining" class="image" />
+            <p>Dining</p>
+          </span>
+          <span class="container_pic">
+            <img src="c4p2.jpg" alt="Interior Home" class="image" />
+            <p>Home</p>
+          </span>
+          <span class="container_pic">
+            <img src="c4p3.jpg" alt="Food" class="image" />
+            <p>Kitchen</p>
+          </span>
+          <span class="container_pic">
+            <img src="c4p4.jpg" alt="Cream" class="image" />
+            <p>Health and Beauty</p>
+          </span>
+          <div>
+            <a class="see_more" href="www.google.com" target="_blank"
+              >See more</a
+            >
+          </div>
+        </div>
+
+        <!-- Container 5 Half and Quarter Pics-->
+        <div class="Container5 C">
+          <h2>Amazon Gadget Store</h2>
+          <span class="half_pic_container">
+            <img src="c5p1.jpg" alt="Smartphones" class="half_image" />
+            <p>Smartphones</p>
+          </span>
+          <span class="quarter_pic_container">
+            <img src="c5p2.jpg" alt="Smartphones" class="quarter_image" />
+            <p>Tablets</p>
+          </span>
+          <span class="quarter_pic_container">
+            <img src="c5p3.jpg" alt="Laptops" class="quarter_image" />
+            <p>Laptops</p>
+          </span>
+          <span class="quarter_pic_container">
+            <img src="c5p4.jpg" alt="TVs" class="quarter_image" />
+            <p>TVs</p>
+          </span>
+          <div>
+            <a class="see_more" href="www.google.com" target="_blank"
+              >See more from Amazon Gadgets</a
+            >
+          </div>
+        </div>
+
+        <!-- Container 6 Single Pic-->
+        <div class="Container6 C">
+          <h2>Home décor under $50</h2>
+          <span class="single_pic_container">
+            <img src="c6.jpg" alt="Light Bulp" class="single_image" />
+          </span>
+          <div>
+            <a class="see_more" href="www.google.com" target="_blank"
+              >Shop now</a
+            >
+          </div>
+        </div>
+
+        <!-- Container 7 Single Pic-->
+        <div class="Container7 C">
+          <h2>Toys under $25</h2>
+          <span class="single_pic_container">
+            <img src="c7.jpg" alt="Toys" class="single_image" />
+          </span>
+          <div>
+            <a class="see_more" href="www.google.com" target="_blank"
+              >Shop now</a
+            >
+          </div>
+        </div>
+
+        <!-- Container 8 Single Pic-->
+        <div class="Container8 C">
+          <h2>Beauty steals under $25</h2>
+          <span class="single_pic_container">
+            <img src="c8.jpg" alt="MakeUp" class="single_image" />
+          </span>
+          <div>
+            <a class="see_more" href="www.google.com" target="_blank"
+              >Shop now</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
